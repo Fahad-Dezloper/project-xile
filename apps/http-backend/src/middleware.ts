@@ -1,17 +1,25 @@
-import { NextFunction, Request, Response } from "express";
+import { NextFunction, Request, Response } from "express"
 import jwt from 'jsonwebtoken';
-export function middleware(req:Request, res:Response, next:NextFunction){
-    const token = req.headers["authorization"] ?? "";
+import {JWT_SECRET} from "@repo/backend-common"
 
-    const decoded = jwt.verify(token, JWT_SECRET);
+export function middleware(req: Request, res: Response, next: NextFunction){
+    const token = req.headers['authorization'] ?? '';
 
-    if(decoded){
+    if(!token){
+     res.status(411).json({
+        message: "Token missing"
+     })
+
+     const decoded = jwt.verify(token, JWT_SECRET);
+
+     if(decoded){
         // @ts-ignore
         req.userId = decoded.userId;
         next();
-    } else{
+     }else{
         res.status(403).json({
-            message: "unauthorized"
+            message: "Unauthorized"
         })
+     }
     }
 }

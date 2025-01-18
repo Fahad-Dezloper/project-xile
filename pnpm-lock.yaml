@@ -20,15 +20,6 @@ importers:
 
   apps/http-backend:
     dependencies:
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../../packages/typescript-config
-      '@types/express':
-        specifier: ^5.0.0
-        version: 5.0.0
-      '@types/jsonwebtoken':
-        specifier: ^9.0.7
-        version: 9.0.7
       express:
         specifier: ^4.21.2
         version: 4.21.2
@@ -39,6 +30,15 @@ importers:
       '@repo/backend-common':
         specifier: workspace:*
         version: link:../../packages/backend-common
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../../packages/typescript-config
+      '@types/express':
+        specifier: ^5.0.0
+        version: 5.0.0
+      '@types/jsonwebtoken':
+        specifier: ^9.0.7
+        version: 9.0.7
 
   apps/web:
     dependencies:
@@ -76,9 +76,9 @@ importers:
 
   apps/ws-backend:
     dependencies:
-      '@types/ws':
-        specifier: ^8.5.13
-        version: 8.5.13
+      jsonwebtoken:
+        specifier: ^9.0.2
+        version: 9.0.2
       ws:
         specifier: ^8.18.0
         version: 8.18.0
@@ -89,6 +89,12 @@ importers:
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
+      '@types/jsonwebtoken':
+        specifier: ^9.0.7
+        version: 9.0.7
+      '@types/ws':
+        specifier: ^8.5.13
+        version: 8.5.13
 
   packages/backend-common:
     dependencies:
