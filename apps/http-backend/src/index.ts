@@ -45,7 +45,7 @@ app.post("/room", middleware, (req, res) => {
         res.json({
             message: "Incorrect Credentials"
         })
-        return
+        return;
     }
 // db call
     res.json({
