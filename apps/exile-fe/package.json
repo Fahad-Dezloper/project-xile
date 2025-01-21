@@ -11,8 +11,9 @@
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.1.5",
-    "@repo/ui": "workspace:*"
+    "@repo/ui": "workspace:*",
+    "axios": "^1.7.9",
+    "next": "15.1.5"
   },
   "devDependencies": {
     "typescript": "^5",

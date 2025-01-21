@@ -17,7 +17,9 @@
   "dependencies": {
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
-    "@repo/db": "workspace:*"
+    "@repo/db": "workspace:*",
+    "cors": "^2.8.5",
+    "@types/cors": "^2.8.17"
   },
   "keywords": [],
   "author": "",
