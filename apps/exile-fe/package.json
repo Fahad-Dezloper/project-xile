@@ -13,7 +13,8 @@
     "react-dom": "^19.0.0",
     "@repo/ui": "workspace:*",
     "axios": "^1.7.9",
-    "next": "15.1.5"
+    "next": "15.1.5",
+    "lucide-react": "^0.473.0"
   },
   "devDependencies": {
     "typescript": "^5",
